@@ -26,15 +26,15 @@ gem 'simple_form'
 - haml for devise links
 
 ```
-			- if user_signed_in?
-				%ul.nav.navbar-nav.navbar-right
-					%li= link_to "New Pin", new_pin_path
-					%li= link_to "Account", edit_user_registration_path
-					%li= button_to "Sign Out", destroy_user_session_path, method: :delete
-			- else
-				%ul.nav.navbar-nav.navbar-right
-					%li= link_to "Sign Up", new_user_registration_path
-					%li= link_to "Sign In", new_user_session_path
+- if user_signed_in?
+	%ul.nav.navbar-nav.navbar-right
+		%li= link_to "New Pin", new_pin_path
+		%li= link_to "Account", edit_user_registration_path
+		%li= button_to "Sign Out", destroy_user_session_path, method: :delete
+- else
+	%ul.nav.navbar-nav.navbar-right
+		%li= link_to "Sign Up", new_user_registration_path
+		%li= link_to "Sign In", new_user_session_path
 
 ```
 - acts as votable on pins
