@@ -30,7 +30,7 @@ gem 'simple_form'
 				%ul.nav.navbar-nav.navbar-right
 					%li= link_to "New Pin", new_pin_path
 					%li= link_to "Account", edit_user_registration_path
-					%li= link_to "Sign Out", destroy_user_session_path, method: :delete
+					%li= button_to "Sign Out", destroy_user_session_path, method: :delete
 			- else
 				%ul.nav.navbar-nav.navbar-right
 					%li= link_to "Sign Up", new_user_registration_path
